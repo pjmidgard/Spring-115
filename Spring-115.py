@@ -319,10 +319,10 @@ class compression:
                                                                                 if Times6>15 or size_of_block!=long_block:
                                                                                     size_data4=Zeroes
 
-                                                                                elif size_of_block<=size_after_block+1 and Times6<16 or size_of_block==long_block:
+                                                                                elif size_of_block<=size_after_block+1 and Times6<16 and size_of_block==long_block:
                                                                                     size_data4="0"+Zeroes
                                                                                     
-                                                                                elif size_of_block>size_after_block+1 and Times6<16 or size_of_block==long_block:
+                                                                                elif size_of_block>size_after_block+1 and Times6<16 and size_of_block==long_block:
                                                                                     size_data4="1"+size_data7
                                                                                     
                                                                                 
