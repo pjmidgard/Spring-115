@@ -162,7 +162,14 @@ class compression:
                                     size_data2=size_data
 
                                     lenf3=len(size_data2)
-                                lenf2=len(size_data2)  
+                                lenf2=len(size_data2)
+
+                                if lenf2<=15345:
+                                    x4=0.0
+                                    print("File too small")
+                                    print(x4)
+                                    raise SystemExit
+                                    
                                 
                                 size_data3=size_data2
                                 long_file=len(size_data3)
