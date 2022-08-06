@@ -677,7 +677,7 @@ class compression:
 
                                                                                     block=block+size_after4
                                                                                     
-                                                                                elif Zeroes=="0" and size_after2==long_block:
+                                                                                elif Zeroes=="0" and size_after2==long_block and Times6<16:
                                                                                     block=block+1
                                                                                     Zeroes3=size_data3[block:block+blocks]
                                                                                     size_after3=len(Zeroes3)
@@ -689,7 +689,7 @@ class compression:
                                                                                     
                                                                                 
 
-                                                                                elif Zeroes=="1" and size_after2==long_block:
+                                                                                elif Zeroes=="1" and size_after2==long_block and Times6<16:
                                                                                     block=block+1
                                                                                 
                                                                                     size_of_block=len(Zeroes)
