@@ -319,10 +319,10 @@ class compression:
                                                                                 if Times6>15 or size_of_block!=long_block:
                                                                                     size_data4=Zeroes
 
-                                                                                elif size_of_block<=size_after_block+1:
+                                                                                elif size_of_block<=size_after_block+1 and Times6<16 or size_of_block==long_block:
                                                                                     size_data4="0"+Zeroes
                                                                                     
-                                                                                else:
+                                                                                elif size_of_block>size_after_block+1 and Times6<16 or size_of_block==long_block:
                                                                                     size_data4="1"+size_data7
                                                                                     
                                                                                 
@@ -677,7 +677,7 @@ class compression:
 
                                                                                     block=block+size_after4
                                                                                     
-                                                                                elif Zeroes=="0":
+                                                                                elif Zeroes=="0" and size_after2==long_block:
                                                                                     block=block+1
                                                                                     Zeroes3=size_data3[block:block+blocks]
                                                                                     size_after3=len(Zeroes3)
@@ -689,7 +689,7 @@ class compression:
                                                                                     
                                                                                 
 
-                                                                                elif Zeroes=="1":
+                                                                                elif Zeroes=="1" and size_after2==long_block:
                                                                                     block=block+1
                                                                                 
                                                                                     size_of_block=len(Zeroes)
